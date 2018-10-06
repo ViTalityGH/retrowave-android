@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/retroPanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.senior.retrowavereborn.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/palm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/onlypalm"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/artBlur"
+        android:layout_width="1500dp"
+        android:layout_height="1500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorTransperent" />
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/colorTransperent"
+
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ToolbarColoredBackArrow"
+        app:titleTextColor="@android:color/white">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/art"
+        android:layout_width="220dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="@+id/cassette"
+        app:layout_constraintRight_toRightOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/cassette"
+        app:srcCompat="@color/colorTransperent" />
+
+    <ImageView
+        android:id="@+id/cassette"
+        android:layout_width="230dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cassette" />
+
+    <ImageView
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/ripple_effect"
+        app:layout_constraintEnd_toEndOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/playBtn"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageView
+        android:id="@+id/previousBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:background="@drawable/ripple_effect"
+        app:layout_constraintStart_toStartOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/playBtn"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageView
+        android:id="@+id/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/ripple_effect"
+        app:layout_constraintEnd_toEndOf="@+id/cassette"
+        app:layout_constraintLeft_toRightOf="@+id/previousBtn"
+        app:layout_constraintRight_toLeftOf="@+id/nextBtn"
+        app:layout_constraintStart_toStartOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/cassette"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/trackName"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+
+        android:focusableInTouchMode="true"
+        android:fontFamily="cursive"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="@+id/cassette"
+        app:layout_constraintRight_toRightOf="@+id/cassette"
+        app:layout_constraintTop_toBottomOf="@+id/cassette"
+        tools:fontFamily="casual" />
+
+    <TextView
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="12dp"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="19sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintRight_toLeftOf="@+id/slash"
+        app:layout_constraintTop_toBottomOf="@+id/trackName" />
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="18dp"
+        android:text="00:00"
+        android:textColor="#9cf1ff"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toRightOf="@+id/slash"
+        app:layout_constraintTop_toBottomOf="@+id/trackName" />
+
+    <TextView
+        android:id="@+id/slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="/"
+        android:textColor="#9cf1ff"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackName"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <SeekBar
+        android:id="@+id/volumeSeekbar"
+        android:layout_width="222dp"
+        android:layout_height="29dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="36dp" />
+
+    <ImageView
+        android:id="@+id/volumeDown"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/ripple_effect"
+        app:srcCompat="@drawable/volumedown"
+        app:layout_constraintTop_toTopOf="@+id/volumeSeekbar"
+        android:layout_marginTop="0dp"
+        app:layout_constraintRight_toLeftOf="@+id/volumeSeekbar"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/volumeUp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/volumeSeekbar"
+        app:srcCompat="@drawable/volumeup"
+        app:layout_constraintTop_toTopOf="@+id/volumeSeekbar"
+        android:layout_marginTop="0dp" />
+
+    <ImageView
+        android:id="@+id/reelRight"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintEnd_toEndOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/cassette"
+        app:srcCompat="@drawable/reel" />
+
+    <ImageView
+        android:id="@+id/reelLeft"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toStartOf="@+id/cassette"
+        app:layout_constraintTop_toTopOf="@+id/cassette"
+        app:srcCompat="@drawable/reel" />
+
+
+
+</android.support.constraint.ConstraintLayout>

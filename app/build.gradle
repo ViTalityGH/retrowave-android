@@ -1,0 +1,67 @@
+buildscript {
+    repositories {
+
+    }
+
+    dependencies {
+
+    }
+}
+apply plugin: 'com.android.application'
+
+
+repositories {
+
+}
+
+
+android {
+
+    dexOptions {
+        jumboMode = true
+    }
+
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.senior.retrowavereborn"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 60
+        versionName "3.7.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.google.android.exoplayer:exoplayer:r2.4.0'
+    implementation 'com.google.android.exoplayer:extension-okhttp:r2.4.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.jrvansuita:GaussianBlur:+'
+    implementation 'com.github.javiersantos:MaterialStyledDialogs:2.1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.github.medyo:fancybuttons:1.8.4'
+    implementation 'com.github.jetradarmobile:android-snowfall:1.1.6'
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+    implementation 'com.github.pwittchen:swipe:0.1.0'
+
+}
